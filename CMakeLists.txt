@@ -98,10 +98,6 @@ target_compile_options(${CURRENT_PROJECT_NAME} PUBLIC
                        $<$<STREQUAL:${CMAKE_BUILD_TYPE},"Release">:"${${CURRENT_PROJECT_NAME}_CMAKE_CXX_FLAGS_RELEASE}">
                        $<$<STREQUAL:${CMAKE_BUILD_TYPE},"RelWithDebInfo">:"${${CURRENT_PROJECT_NAME}_CMAKE_CXX_FLAGS_RELWITHDEBINFO}">)
 
-target_link_libraries(${CURRENT_PROJECT_NAME} INTERFACE
-
-                      ${Boost_LIBRARIES})
-
 target_include_directories(${CURRENT_PROJECT_NAME} INTERFACE
                            $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
                            $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
